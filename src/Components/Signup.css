@@ -23,7 +23,7 @@
 }
 
 .image-section {
-  background: url("C:/Users/HP/OneDrive/Desktop/AdHub/frontend/src/Components/images/login.jpg") no-repeat center center;
+  background-image: url('./images/login.jpg');
   background-size: cover;
   background-position: center;
   width: 50%;
