@@ -22,7 +22,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/register", // Your backend API endpoint
+        "https://adhub-backend-production.up.railway.app/api/users/register", // Your backend API endpoint
         formData
       );
       localStorage.setItem("authToken", response.data.token); // Save token in localStorage

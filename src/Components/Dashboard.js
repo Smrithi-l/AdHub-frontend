@@ -69,7 +69,7 @@ const Dashboard = () => {
     setError(null);
     try {
       const token = localStorage.getItem("authToken");
-      const response = await fetch("http://localhost:5000/api/ads/save", {
+      const response = await fetch("https://adhub-backend-production.up.railway.app/api/ads/save", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ const Dashboard = () => {
     setError(null);
     try {
       const response = await fetch(
-        `http://localhost:5000/api/ads/ads?userId=${userId}`
+        `https://adhub-backend-production.up.railway.app/api/ads/ads?userId=${userId}`
       );
 
       if (response.ok) {

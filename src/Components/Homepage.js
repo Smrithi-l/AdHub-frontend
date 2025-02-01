@@ -50,7 +50,7 @@ const Header = () => {
     },
     {
       id: 5,
-      title: "Real-Time Analytics",
+      title: "Time Analytics",
       link: "#",
       icon: <IoPulseOutline />,
       delay: 0.6,

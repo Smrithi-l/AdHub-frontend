@@ -22,7 +22,7 @@ const ChatWidget = () => {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:5000/api/chat", formData);
+      await axios.post("https://adhub-backend-production.up.railway.app/api/chat", formData);
       alert("Your query has been submitted!");
       setOpen(false);
       setFormData({ name: "", email: "", question: "" });

@@ -42,7 +42,7 @@ const AdminDashboard = () => {
   const fetchAds = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:5000/api/admin/ads", {
+      const response = await axios.get("https://adhub-backend-production.up.railway.app/api/admin/ads", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAds(response.data.ads);
@@ -53,7 +53,7 @@ const AdminDashboard = () => {
 
   const fetchQueries = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/chat");
+      const response = await axios.get("https://adhub-backend-production.up.railway.app/api/chat");
       setQueries(response.data.queries);
     } catch (err) {
       setError("Failed to fetch chat queries. Please try again.");
@@ -63,7 +63,7 @@ const AdminDashboard = () => {
   const fetchClients = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:5000/api/ads/admin/clients", {
+      const response = await axios.get("https://adhub-backend-production.up.railway.app/api/ads/admin/clients", {
         headers: { Authorization: `Bearer ${token} `},
       });
       setClients(response.data.clients);
@@ -77,7 +77,7 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5000/api/ads/admin/ad/${adId}`,
+        `https://adhub-backend-production.up.railway.app/api/ads/admin/ad/${adId}`,
         { status },
         { headers: { Authorization: `Bearer ${token} `} }
       );
